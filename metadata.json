@@ -1,0 +1,6 @@
+{
+  "name": "PO Tracker",
+  "description": "Cross-platform Progressive Overload fitness tracking application with Dart logic engine and Hevy-style dark UI",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

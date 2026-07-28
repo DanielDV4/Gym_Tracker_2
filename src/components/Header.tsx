@@ -1,0 +1,54 @@
+import React from 'react';
+import { Zap, Code2, Smartphone, Monitor } from 'lucide-react';
+
+interface HeaderProps {
+  isMobileFrame: boolean;
+  setIsMobileFrame: (val: boolean) => void;
+  activeTab: string;
+  setActiveTab: (tab: string) => void;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  isMobileFrame,
+  setIsMobileFrame,
+  activeTab,
+  setActiveTab,
+}) => {
+  return (
+    <header className="bg-[#1C1C1E] border-b border-[#2C2C2E] px-4 py-3 flex items-center justify-between sticky top-0 z-50">
+      <div className="flex items-center space-x-2">
+        <div className="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center">
+          <Zap className="w-5 h-5 text-blue-400" />
+        </div>
+        <div>
+          <h1 className="text-white font-bold text-base leading-tight">PO Tracker</h1>
+          <span className="text-[10px] text-zinc-400 font-medium tracking-wide">
+            FLUTTER 3.27+ • DART ENGINE
+          </span>
+        </div>
+      </div>
+
+      <div className="flex items-center space-x-2">
+        <button
+          onClick={() => setActiveTab(activeTab === 'code' ? 'workout' : 'code')}
+          className={`flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+            activeTab === 'code'
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'bg-[#2C2C2E] text-zinc-300 hover:text-white'
+          }`}
+        >
+          <Code2 className="w-3.5 h-3.5" />
+          <span className="hidden sm:inline">Dart Code</span>
+        </button>
+
+        <button
+          onClick={() => setIsMobileFrame(!isMobileFrame)}
+          className="p-1.5 rounded-md bg-[#2C2C2E] text-zinc-300 hover:text-white transition-colors"
+          title={isMobileFrame ? 'Switch to Expanded View' : 'Switch to Mobile Frame'}
+        >
+          {isMobileFrame ? <Monitor className="w-4 h-4" /> : <Smartphone className="w-4 h-4" />}
+        </button>
+      </div>
+    </header>
+  );
+};
