@@ -15,14 +15,15 @@ export const Header: React.FC<HeaderProps> = ({
   setActiveTab,
 }) => {
   return (
-    <header className="bg-[#1C1C1E] border-b border-[#2C2C2E] px-4 py-3 flex items-center justify-between sticky top-0 z-50">
-      <div className="flex items-center space-x-2">
-        <div className="w-8 h-8 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center">
-          <Zap className="w-5 h-5 text-blue-400" />
+    <header className="bg-[#1C1C1E]/90 backdrop-blur-md border-b border-[#2C2C2E] px-4 py-3 flex items-center justify-between sticky top-0 z-50">
+      <div className="flex items-center space-x-2.5">
+        <div className="w-8 h-8 rounded-lg bg-[#00E676]/10 border border-[#00E676]/30 flex items-center justify-center shadow-sm shadow-[#00E676]/20">
+          <Zap className="w-4 h-4 text-[#00E676]" />
         </div>
         <div>
-          <h1 className="text-white font-bold text-base leading-tight">PO Tracker</h1>
-          <span className="text-[10px] text-zinc-400 font-medium tracking-wide">
+          <h1 className="text-white font-extrabold text-base leading-tight tracking-tight">PO Tracker</h1>
+          <span className="text-[10px] text-[#00E676] font-bold tracking-wider uppercase flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00E676] animate-pulse"></span>
             FLUTTER 3.27+ • DART ENGINE
           </span>
         </div>
@@ -31,10 +32,10 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="flex items-center space-x-2">
         <button
           onClick={() => setActiveTab(activeTab === 'code' ? 'workout' : 'code')}
-          className={`flex items-center space-x-1.5 px-2.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+          className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
             activeTab === 'code'
-              ? 'bg-blue-600 text-white shadow-sm'
-              : 'bg-[#2C2C2E] text-zinc-300 hover:text-white'
+              ? 'bg-[#00E676] text-black shadow-md shadow-[#00E676]/30'
+              : 'bg-[#2C2C2E] text-zinc-300 hover:text-white hover:bg-zinc-800'
           }`}
         >
           <Code2 className="w-3.5 h-3.5" />

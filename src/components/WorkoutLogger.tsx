@@ -177,16 +177,16 @@ export const WorkoutLogger: React.FC<WorkoutLoggerProps> = ({ allExercises }) =>
     <div className="p-4 space-y-4 pb-20">
       {/* Top Controls */}
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold text-white flex items-center gap-2">
-          <Dumbbell className="w-5 h-5 text-blue-400" />
+        <h2 className="text-lg font-extrabold text-white flex items-center gap-2 tracking-tight">
+          <Dumbbell className="w-5 h-5 text-[#00E676]" />
           <span>Workout Logger</span>
         </h2>
 
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center space-x-1.5 shadow-md shadow-blue-600/20 transition-all"
+          className="px-3.5 py-1.5 rounded-xl bg-[#00E676] hover:bg-[#00C853] text-black font-extrabold text-xs flex items-center space-x-1.5 shadow-md shadow-[#00E676]/20 transition-all transform active:scale-95"
         >
-          <Plus className="w-3.5 h-3.5" />
+          <Plus className="w-3.5 h-3.5 stroke-[3]" />
           <span>Add Exercise</span>
         </button>
       </div>

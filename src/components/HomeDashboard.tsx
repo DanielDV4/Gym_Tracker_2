@@ -16,22 +16,22 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   onStartWorkout,
 }) => {
   return (
-    <div className="p-4 space-y-5 pb-20">
+    <div className="p-4 space-y-5 pb-24">
       {/* Quick Start Hero Card */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-950/60 via-[#1C1C1E] to-[#1C1C1E] border border-blue-500/30 p-5 shadow-xl">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1C1C1E] via-[#1C1C1E] to-emerald-950/30 border border-[#00E676]/30 p-5 shadow-2xl shadow-[#00E676]/5">
         <div className="absolute top-0 right-0 p-4 opacity-10">
-          <TrendingUp className="w-28 h-28 text-blue-400" />
+          <TrendingUp className="w-32 h-32 text-[#00E676]" />
         </div>
 
-        <div className="relative z-10 space-y-3">
+        <div className="relative z-10 space-y-3.5">
           <div className="flex items-center space-x-2">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">
-              DART PURE ENGINE
+            <span className="text-[10px] font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[#00E676]/15 text-[#00E676] border border-[#00E676]/30">
+              PURE DART ENGINE
             </span>
-            <span className="text-xs text-zinc-400 font-medium">Progressive Overload</span>
+            <span className="text-xs text-zinc-400 font-semibold">Progressive Overload</span>
           </div>
 
-          <h2 className="text-xl font-bold text-white tracking-tight leading-snug">
+          <h2 className="text-xl font-extrabold text-white tracking-tight leading-snug">
             Automatic Weight Progression & 3-Strike Deload Engine
           </h2>
 
@@ -41,7 +41,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
 
           <button
             onClick={onStartWorkout}
-            className="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-blue-600/30 transition-all"
+            className="w-full py-3.5 px-4 rounded-xl bg-[#00E676] hover:bg-[#00C853] text-black font-extrabold text-sm flex items-center justify-center space-x-2 shadow-lg shadow-[#00E676]/25 transition-all transform active:scale-[0.98]"
           >
             <Play className="w-4 h-4 fill-current" />
             <span>Start Interactive Workout Logger</span>

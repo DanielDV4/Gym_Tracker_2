@@ -4,8 +4,8 @@ class AppTheme {
   static const Color backgroundColor = Color(0xFF0D0D0D);
   static const Color cardColor = Color(0xFF1C1C1E);
   static const Color cardBorderColor = Color(0xFF2C2C2E);
-  static const Color primaryAccent = Color(0xFF0A84FF);
-  static const Color successGreen = Color(0xFF30D158);
+  static const Color primaryAccent = Color(0xFF00E676);
+  static const Color successGreen = Color(0xFF00E676);
   static const Color warningRed = Color(0xFFFF453A);
   static const Color textPrimary = Color(0xFFFFFFFF);
   static const Color textSecondary = Color(0xFF8E8E93);

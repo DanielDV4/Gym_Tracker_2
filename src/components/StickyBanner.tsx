@@ -9,14 +9,14 @@ interface StickyBannerProps {
 }
 
 export const StickyBanner: React.FC<StickyBannerProps> = ({ message, type, onDismiss }) => {
-  let bgColor = 'bg-blue-500/15 border-blue-500/40 text-blue-400';
+  let bgColor = 'bg-[#00E676]/15 border-[#00E676]/40 text-[#00E676]';
   let Icon = Info;
 
   if (type === BannerType.SUCCESS) {
-    bgColor = 'bg-emerald-500/15 border-emerald-500/40 text-emerald-400';
+    bgColor = 'bg-[#00E676]/20 border-[#00E676]/50 text-[#00E676]';
     Icon = TrendingUp;
   } else if (type === BannerType.ERROR) {
-    bgColor = 'bg-rose-500/15 border-rose-500/40 text-rose-400';
+    bgColor = 'bg-rose-500/20 border-rose-500/50 text-rose-400';
     Icon = AlertTriangle;
   }
 
